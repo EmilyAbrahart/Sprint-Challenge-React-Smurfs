@@ -6,5 +6,6 @@ body {
   color: white;
   background-image: url('./imgs/Blue\ Raspberry.jpg');
   background-attachment: fixed;
-  background-repeat: space;
+  background-repeat: none;
+  background-size: cover;
 }

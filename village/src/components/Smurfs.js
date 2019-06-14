@@ -3,8 +3,8 @@ import Smurf from './Smurf';
 import styled from 'styled-components';
 
 const SmurfHeading = styled.h1`
-font-size: 3rem;
-`
+	font-size: 3rem;
+`;
 
 class Smurfs extends Component {
 	render() {
@@ -19,11 +19,11 @@ class Smurfs extends Component {
 								id={smurf.id}
 								age={smurf.age}
 								height={smurf.height}
-                key={smurf.id}
-                deleteSmurf={this.props.deleteSmurf}
-                isUpdating={this.props.isUpdating}
-                updateSmurf={this.props.updateSmurf}
-                putSmurf={this.props.putSmurf}
+								key={smurf.id}
+								deleteSmurf={this.props.deleteSmurf}
+								isUpdating={this.props.isUpdating}
+								updateSmurf={this.props.updateSmurf}
+								putSmurf={this.props.putSmurf}
 							/>
 						);
 					})}

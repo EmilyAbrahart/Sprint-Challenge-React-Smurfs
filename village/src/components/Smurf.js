@@ -72,9 +72,9 @@ const UpdateSmurfForm = styled.form`
 
 export default class Smurf extends Component {
 	state = {
-		name: '',
-		age: '',
-		height: '',
+		name: this.props.name,
+		age: this.props.age,
+		height: this.props.height,
 		isUpdating: false
 	};
 
