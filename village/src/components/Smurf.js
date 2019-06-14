@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const SmurfDiv = styled.div`
@@ -35,24 +35,28 @@ const SmurfButton = styled.button`
 	}
 `;
 
-const Smurf = props => {
-	return (
-		<SmurfDiv>
-			<h3>{props.name}</h3>
-			<strong>{props.height} tall</strong>
-			<p>{props.age} smurf years old</p>
-			<SmurfButtonContainer>
-				<SmurfButton>Update</SmurfButton>
-				<SmurfButton>Delete</SmurfButton>
-			</SmurfButtonContainer>
-		</SmurfDiv>
-	);
-};
+export default class Smurf extends Component {
+	deleteSmurf = () => {
+		this.props.deleteSmurf(this.props.id);
+	};
+
+	render() {
+		return (
+			<SmurfDiv>
+				<h3>{this.props.name}</h3>
+				<strong>{this.props.height} tall</strong>
+				<p>{this.props.age} smurf years old</p>
+				<SmurfButtonContainer>
+					<SmurfButton>Update</SmurfButton>
+					<SmurfButton onClick={this.deleteSmurf}>Delete</SmurfButton>
+				</SmurfButtonContainer>
+			</SmurfDiv>
+		);
+	}
+}
 
 Smurf.defaultProps = {
 	name: '',
 	height: '',
 	age: ''
 };
-
-export default Smurf;
