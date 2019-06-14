@@ -93,8 +93,11 @@ export default class Smurf extends Component {
 	};
 
   putSmurf = event => {
-    event.preventDefault;
-    this.props.putSmurf(this.state.name, this.state.age, this.state.height, this.props.id)
+    event.preventDefault();
+		this.props.putSmurf(this.state.name, this.state.age, this.state.height, this.props.id)
+		this.setState({
+			isUpdating: false
+		})
   }
 
   cancelUpdate = () => {
