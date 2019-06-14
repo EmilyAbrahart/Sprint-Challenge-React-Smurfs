@@ -2,4 +2,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: #61b3ff;
+  color: white;
+  background-image: url('./imgs/Blue\ Raspberry.jpg');
+  background-attachment: fixed;
+  background-repeat: space;
 }
